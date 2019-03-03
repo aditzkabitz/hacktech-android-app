@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.1/jspdf.debug.js"></script>
+  
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h2><a href="#"><i class="ion-plane"></i> Video Decoder</a></h2>
+    <nav>
+      <ul>
+        <li>
+          <a class="btn" href="/signup" title="Register">Register</a>
+        </li>
+        <li>
+          <a class="btn" href="/login" title="Log In">Log In</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="cover">
+    <div>
+      <form class="flex-form move-up">
+      <label for="from">
+        <i class="ion-location"></i>
+      </label>
+      <input type="search" placeholder="Paste video link here">
+      <input type="submit" value="Summarize" onclick="genPDF()">
+    </form>
+    </div>  
+    <div class="move-up2">
+      <center><h1 id="mission-statement">Full video summaries quickly.</h1></center>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+    function genPDF() {
+      var doc = new jsPDF()
+      doc.text('Hello world!', 10, 10)
+      doc.save('a4.pdf')
+      console.log('created')
+    }
+  </script>
+
+</body>
+</html>
